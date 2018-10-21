@@ -1,0 +1,68 @@
+{% extends "header.html" %}
+
+{% block body %}
+
+<div role="tabpanel">
+	<ul class="nav nav-tabs" role="tablist">
+		<ul class="nav nav-pills nav-fill">
+			<li class="nav-item active">
+				<a class="nav-link active"  href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link"  href="#Data_Science" aria-controls="Data_Science" role="tab" data-toggle="tab">Data Science/Analysis</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link"  href="#Game_Development" aria-controls="Game_Development" role="tab" data-toggle="tab">Game Development</a>
+			</li>
+
+			<li class="nav-item">
+				<a class="nav-link"  href="#Cloud" aria-controls="Cloud" role="tab" data-toggle="tab">Cloud</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link"  href="#Fun" aria-controls="Fun" role="tab" data-toggle="tab">Fun</a>
+			</li>
+		</ul>
+	</ul>
+
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+	<div role="tabpanel" class="tab-pane active" id="profile">
+		I am the BEST Coder EVER!!!
+	</div>
+    <div role="tabpanel" class="tab-pane fade" id="Data_Science">
+		<ul>
+			{% for t in TOPIC_DICT["Data_Science"] %}
+			<li><a href="{{t[1]}}">{{t[0]}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+    <div role="tabpanel" class="tab-pane fade" id="Cloud">
+		</p>These are links to blog post for each of my Cloud based projects i have worked on</p>
+		<ul>
+			{% for t in TOPIC_DICT["Cloud"] %}
+			<li><a href="{{t[1]}}">{{t[0]}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+    <div role="tabpanel" class="tab-pane fade" id="Game_Development">
+		<ul>
+			{% for t in TOPIC_DICT["Game_Development"] %}
+			<li><a href="{{t[1]}}">{{t[0]}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div role="tabpanel" class="tab-pane fade" id="Fun">
+		<ul>
+			{% for t in TOPIC_DICT["Fun"] %}
+			<li><a href="{{t[1]}}">{{t[0]}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+  </div>
+
+
+</div>
+
+
+{% endblock %}
