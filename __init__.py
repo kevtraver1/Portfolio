@@ -3,7 +3,7 @@ import numpy as np
 from flask import Flask, render_template, flash, request, url_for, redirect
 from content_management import Content
 #import MySQLdb
-
+#Automatic add html file for posts
 TOPIC_DICT = Content()
 
 app = Flask(__name__)
@@ -24,6 +24,13 @@ def dashboard():
         return render_template("dashboard.html",TOPIC_DICT = TOPIC_DICT)
     except Exception as e:
         return render_template("500.html", error = str(e))
+@app.route('/python-basics/')
+def python_basics():
+    try:
+        return render_template("python-basics.html")
+    except Exception as e:
+        return render_template("500.html", error = str(e))
+
 
 @app.route('/contact-me/')
 def contact_me():

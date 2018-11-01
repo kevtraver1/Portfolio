@@ -9,7 +9,10 @@
 				<a class="nav-link active"  href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link"  href="#Data_Science" aria-controls="Data_Science" role="tab" data-toggle="tab">Data Science/Analysis</a>
+				<a class="nav-link"  href="#Python_Tutorial" aria-controls="Python_Tutorial" role="tab" data-toggle="tab">Python Tutorial</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link"  href="#Python_Projects" aria-controls="Python_Projects" role="tab" data-toggle="tab">Python Projects</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link"  href="#Game_Development" aria-controls="Game_Development" role="tab" data-toggle="tab">Game Development</a>
@@ -30,9 +33,16 @@
 	<div role="tabpanel" class="tab-pane active" id="profile">
 		I am the BEST Coder EVER!!!
 	</div>
-    <div role="tabpanel" class="tab-pane fade" id="Data_Science">
+    <div role="tabpanel" class="tab-pane fade" id="Python_Tutorial">
 		<ul>
-			{% for t in TOPIC_DICT["Data_Science"] %}
+			{% for t in TOPIC_DICT["Python_Tutorial"] %}
+			<li><a href="{{t[1]}}">{{t[0]}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div role="tabpanel" class="tab-pane fade" id="Python_Projects">
+		<ul>
+			{% for t in TOPIC_DICT["Python_Projects"] %}
 			<li><a href="{{t[1]}}">{{t[0]}}</a></li>
 			{% endfor %}
 		</ul>
